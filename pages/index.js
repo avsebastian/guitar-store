@@ -1,17 +1,17 @@
-import Head from 'next/head'
+import Link from 'next/link'
+import Layout from '../components/Layout'
+
 
 export default function Home() {
   return (
     <div>
-      <Head>
-        <title>Guitar-Store</title>
-        <meta name="description" content="Guitar store app" />
-        <link rel="icon" href="/favicon.png" />
-      </Head>
-
+      <Layout pagina="Inicio">
         <h1 className="heading">
-          Welcome to <a href="https://google.com">Guitar Store!</a>
+          Welcome to <Link href="/nosotros">Guitar Store!</Link>
         </h1>
+      </Layout>
+
+        
     </div>
   )
 }
