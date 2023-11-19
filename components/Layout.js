@@ -6,8 +6,6 @@ const Layout = ({children, pagina}) => {
     <div>
        <Head>
         <title>Guitar-Store - {pagina}</title>
-        <meta name="description" content="Guitar store app" />
-        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <Header />
