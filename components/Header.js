@@ -34,7 +34,7 @@ const Header = () => {
                   </Link>
                 <Link href="/blog">
                 <a className={router.pathname === '/blog' ? styles.active : ''}>
-                    blog
+                    Blog
                   </a>
                   </Link>
                 <Link href="/tienda">
