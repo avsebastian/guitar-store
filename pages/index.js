@@ -5,8 +5,9 @@ import Layout from '../components/Layout'
 export default function Home() {
   return (
     <div>
-      <Layout pagina="Inicio">
-        <h1 className="heading">
+      <Layout title='Inicio'
+              description='Blog de música, ventas de guitarras y más'>
+        <h1 className='heading'>
           Welcome to <Link href="/nosotros">Guitar Store!</Link>
         </h1>
       </Layout>
