@@ -1,5 +1,8 @@
 import React from 'react'
+import Image from 'next/image'
 import Layout from '../components/Layout'
+import styles from '../styles/nosotros.module.css'
+
 
 const Nosotros = () => {
   return (
@@ -7,7 +10,11 @@ const Nosotros = () => {
             description="Sobre nosotros, Guitar-Store, tienda de música">
          <main className='contenedor'>
             <h2 className='heading'>Nosotros</h2>
-            <div>
+            <div className={styles.contenido}>
+                <Image alt="Imagen sobre nosotros"  
+                      src="/images/nosotros.jpg" 
+                      width={1000} 
+                      height={800}/>
 
               <div>
                 <p>
