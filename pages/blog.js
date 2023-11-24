@@ -15,8 +15,7 @@ const Blog = ({posts}) => {
                   post={post.attributes}
                 />
               ))}
-            </div>
-            
+            </div>            
          </main>
     </Layout>
   )
