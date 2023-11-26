@@ -7,10 +7,6 @@ import Curso from '../components/Curso'
 
 export default function Home({guitarras, posts, curso}) {
 
-  // console.log('guitarras', guitarras)
-  // console.log('posts', posts)
-  console.log('curso', curso)
-
   return (
     <div>
       <Layout title='Inicio'

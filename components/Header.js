@@ -21,25 +21,34 @@ const Header = () => {
                 />
               </a>
             </Link>
-            <nav className={styles.navegacion}>
+            <nav className='navegacion'>
                 <Link href="/">
-                  <a className={router.pathname === '/' ? styles.active : ''}>
+                  <a className={router.pathname === '/' ? 'active' : ''}>
                     Inicio
                   </a>
                 </Link>
                 <Link href="/nosotros">
-                  <a className={router.pathname === '/nosotros' ? styles.active : ''}>
+                  <a className={router.pathname === '/nosotros' ? 'active' : ''}>
                     Nosotros
                   </a>
                   </Link>
                   <Link href="/tienda">
-                    <a className={router.pathname === '/tienda' ? styles.active : ''}>
+                    <a className={router.pathname === '/tienda' ? 'active' : ''}>
                     Tienda
                     </a>
                   </Link>
                   <Link href="/blog">
-                  <a className={router.pathname === '/blog' ? styles.active : ''}>
+                  <a className={router.pathname === '/blog' ? 'active' : ''}>
                     Blog
+                  </a>
+                </Link>
+                <Link href="/carrito">
+                  <a className={router.pathname === '/carrito' ? 'active' : ''}>
+                      <Image width={30} 
+                             height={25} 
+                             src="/images/carrito.png" 
+                             alt="img carritos"
+                      />
                   </a>
                 </Link>
                 
