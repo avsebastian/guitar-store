@@ -1,14 +1,32 @@
+import { useState } from 'react'
 import { useRouter } from 'next/router'
 import Image from "next/image";
 import styles from '../../styles/guitarras.module.css'
 import Layout from '../../components/Layout';
 
-export default function Producto({guitarra}) {
+export default function Producto({ guitarra, agregarCarrito }) {
 
-
+    const [cantidad, setCantidad] = useState(0);
     const { nombre, descripcion, imagen, precio } = guitarra[0].attributes
 
-    const router = useRouter();
+    const handleSubmit = (e) => { 
+        e.preventDefault()
+
+        if(cantidad < 1){
+            alert('Cantidad no valida')
+            return
+        }
+
+        const guitarSelected = {
+            id: guitarra[0].id,
+            imagen: imagen.data.attributes.url,
+            nombre,
+            precio,
+            cantidad
+        }
+
+        agregarCarrito(guitarSelected);
+    }
 
     return (
         <Layout title={`Guitarra ${nombre}`}>
@@ -23,9 +41,11 @@ export default function Producto({guitarra}) {
             <p className={styles.descripcion}>{descripcion}</p>
             <p className={styles.precio}>{`$ ${precio}`}</p>
 
-            <form className={styles.formulario}>
+            <form onSubmit={handleSubmit}
+                  className={styles.formulario}>
                 <label htmlFor='cantidad'>Cantidad</label>
-                <select id="cantidad">
+                <select id="cantidad"
+                        onChange={ e => setCantidad(parseInt(e.target.value)) }>
                     <option value="0">-- Selecciones --</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
